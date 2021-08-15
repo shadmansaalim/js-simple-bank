@@ -65,7 +65,12 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
 
     const currentBalance = getCurrentBalance();
 
-    if (withdrawAmount >= 0 && withdrawAmount <= currentBalance) {
+    if (withdrawAmount > currentBalance) {
+        const balanceToast = document.getElementById('balance-toast');
+        balanceToast.style.display = 'block';
+    }
+
+    else if ((withdrawAmount >= 0) && (withdrawAmount <= currentBalance)) {
 
         //Update Withdraw Total
         updateTotalField('withdraw-total', withdrawAmount);
@@ -74,10 +79,6 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
         updateBalance(-withdrawAmount)
     }
 
-    if (withdrawAmount > currentBalance) {
-        const balanceToast = document.getElementById('balance-toast');
-        balanceToast.style.display = 'block';
-    }
 
     else {
         const withdrawToast = document.getElementById('withdraw-toast');
