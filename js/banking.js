@@ -50,6 +50,10 @@ document.getElementById('deposit-button').addEventListener('click', function () 
         //Update Total Balance
         updateBalance(depositAmount);
     }
+    else {
+        const depositToast = document.getElementById('deposit-toast');
+        depositToast.style.display = 'block';
+    }
 })
 
 
@@ -70,4 +74,23 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
         updateBalance(-withdrawAmount)
     }
 
+    if (withdrawAmount > currentBalance) {
+        const balanceToast = document.getElementById('balance-toast');
+        balanceToast.style.display = 'block';
+    }
+
+    else {
+        const withdrawToast = document.getElementById('withdraw-toast');
+        withdrawToast.style.display = 'block';
+    }
+
 })
+
+
+
+
+
+function removeToast(toastId) {
+    const balanceToast = document.getElementById(toastId);
+    balanceToast.style.display = 'none';
+}

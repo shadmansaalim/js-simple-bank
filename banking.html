@@ -19,12 +19,53 @@
 
 <body class="bg-gray-800" style="font-family: 'Poppins', sans-serif;">
     <header>
+        <div id="balance-toast"
+            class="w-80 absolute top-3 right-4 flex justify-between items-center bg-red-900 text-white py-3 px-3 rounded-lg"
+            style="display: none;">
+            <div>
+                <span class="font-bold">Invalid !</span>
+                You don't have enough balance to withdraw.
+            </div>
+            <div>
+                <button type="button" onclick="removeToast('balance-toast')"
+                    class=" text-green-600 absolute top-2 right-2">
+                    <span class="text-3xl">&times;</span>
+                </button>
+            </div>
+        </div>
+        <div id="deposit-toast"
+            class="w-80 absolute top-3 right-4 flex justify-between items-center bg-red-900 text-white py-3 px-3 rounded-lg"
+            style="display: none;">
+            <div>
+                <span class="font-bold">Invalid Input!</span>
+                Please check your input amount and try again.
+            </div>
+            <div>
+                <button type="button" onclick="removeToast('deposit-toast')"
+                    class=" text-green-600 absolute top-2 right-2">
+                    <span class="text-3xl">&times;</span>
+                </button>
+            </div>
+        </div>
+        <div id="withdraw-toast"
+            class="w-80 absolute top-3 right-4 flex justify-between items-center bg-red-900 text-white py-3 px-3 rounded-lg"
+            style="display: none;">
+            <div>
+                <span class="font-bold">Invalid Input!</span>
+                Please check your input amount and try again.
+            </div>
+            <div>
+                <button type="button" onclick="removeToast('withdraw-toast')"
+                    class=" text-green-600 absolute top-2 right-2">
+                    <span class="text-3xl">&times;</span>
+                </button>
+            </div>
+        </div>
         <!-- Introductary line -->
         <h1 class="text-5xl text-center mt-9"><span class="text-gray-500 font-bold ">Online Banking</span><span
                 class="font-semibold text-green-600">
                 Transaction
             </span></h1>
-
     </header>
 
     <main class="w-11/12 xl:w-3/4 mx-auto">
@@ -56,8 +97,8 @@
                             class="w-full border rounded px-3 py-2 text-gray-700 focus:outline-none mb-4" />
 
                         <button id="deposit-button"
-                            class="w-full py-2 rounded bg-green-600 text-gray-100 focus:outline-none">Deposit <i
-                                class="fas fa-coins"></i></button>
+                            class="site-button w-full py-2 rounded bg-green-600 text-gray-100 focus:outline-none">Deposit
+                            <i class="fas fa-coins"></i></button>
                     </div>
                 </div>
                 <div class="w-full  mx-auto bg-black p-8 rounded ">
@@ -68,8 +109,8 @@
                             class="w-full border rounded px-3 py-2 text-gray-700 focus:outline-none mb-4" />
 
                         <button id="withdraw-button"
-                            class="w-full py-2 rounded bg-green-600 text-gray-100 focus:outline-none">Withdraw <i
-                                class="fas fa-hand-holding-usd"></i></button>
+                            class="site-button w-full py-2 rounded bg-green-600 text-gray-100 focus:outline-none">Withdraw
+                            <i class="fas fa-hand-holding-usd"></i></button>
                     </div>
                 </div>
             </div>
@@ -160,7 +201,7 @@
                                 pellentesque id
                                 nibh tortor id.</p>
                             <button
-                                class="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
+                                class="site-button mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
                         </div>
                     </div>
                 </div>
@@ -177,7 +218,7 @@
                             <p class="mt-4 text-gray-600">Nunc consequat interdum varius sit amet mattis vulputate enim
                                 nulla. Risus feugiat.</p>
                             <button
-                                class="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
+                                class="site-button mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
                         </div>
                     </div>
                 </div>
@@ -195,7 +236,7 @@
                                 elit
                                 scelerisque mauris.</p>
                             <button
-                                class="mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
+                                class="site-button mt-8 mb-4 py-2 px-14 rounded-full bg-green-600 text-white tracking-widest hover:bg-green-500 transition duration-200">MORE</button>
                         </div>
                     </div>
                 </div>
