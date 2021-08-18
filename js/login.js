@@ -7,7 +7,7 @@ document.getElementById('login-button').addEventListener('click', function () {
     const password = pass.value;
 
     //Checking if username and password are correct
-    if (userName == 'shadmansaalim' && password == 'iloveyousubaita') {
+    if (userName == 'bank123' && password == 'coding') {
         window.location.href = 'banking.html';
     }
     else {
